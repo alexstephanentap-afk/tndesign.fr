@@ -1,0 +1,131 @@
+/* --- Variables et Reset --- */
+:root {
+    --gold: #c5a04d;
+    --navy: #1b2650;
+    --dark-footer: #0c122b;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+}
+
+/* --- Entête --- */
+.hero-header {
+    position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(27, 38, 80, 0.75), rgba(27, 38, 80, 0.75)), 
+                url('background 2.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 250px; /* Ajustez selon votre logo */
+}
+
+.titles h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.gold-subtitle {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+
+/* --- Bannière Dorée Centrée --- */
+.floating-banner {
+    position: absolute;
+    bottom: -35px; /* Positionnement à cheval */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    max-width: 700px;
+    background: linear-gradient(to bottom, #d4b062, #9e7d35);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- Zone de texte --- */
+.content-section {
+    padding: 100px 20px 60px 20px; /* Padding haut pour laisser l'espace au bouton */
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 40vh;
+}
+
+.text-container {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+.contact-footer {
+    background-color: var(--dark-footer);
+    color: var(--white);
+    padding: 30px 20px;
+    font-size: 0.95rem;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.links {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+.footer-row a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .titles h1 { font-size: 2.2rem; }
+    .floating-banner { width: 90%; }
+    .banner-title { font-size: 1.5rem; }
+}

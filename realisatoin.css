@@ -1,0 +1,186 @@
+/* --- Couleurs et Reset de base --- */
+:root {
+    --primary-blue: #1b2650; /* Bleu de l'entête */
+    --gold-main: #c49e4d;   /* Doré principal */
+    --gold-hover: #b18c41;   /* Doré au survol */
+    --footer-dark: #0f152e;  /* Bleu très foncé du footer */
+    --white: #ffffff;
+    --text-shadow: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Montserrat', 'Arial', sans-serif; /* Montserrat si chargée, sinon Arial */
+    color: var(--white);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* --- SECTION ENTÊTE (Bleue) --- */
+.hero-header {
+    position: relative;
+    /* Remplacez par le chemin de votre image de fond pour l'entête */
+    background: var(--primary-blue) url('background 2.jpg') center/cover no-repeat;
+    min-height: 45vh; /* Hauteur de l'entête */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 60px; /* Espace pour le bouton qui chevauche */
+}
+
+/* Overlay sombre pour la lisibilité du texte */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(27, 38, 80, 0.85); /* Teinte bleue transparente */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2; /* Au-dessus de l'overlay */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.main-logo {
+    width: 200px;
+    height: auto;
+}
+
+.title-container h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0;
+    text-shadow: 2px 2px 5px var(--text-shadow);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--gold-main);
+    letter-spacing: 2px;
+    margin-top: -5px;
+    font-weight: 300;
+}
+
+/* --- BOUTON CENTRAL (Chevauchement) --- */
+.cta-banner {
+    position: absolute;
+    bottom: -40px; /* Position précise à cheval */
+    left: 50%;
+    transform: translateX(-50%); /* Centrage horizontal parfait */
+    z-index: 10;
+    background: linear-gradient(to bottom, var(--gold-main), #b18c41);
+    padding: 20px 60px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.main-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-next {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-next:hover {
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* --- GRILLE DE PHOTOS --- */
+.gallery-section {
+    background-color: var(--white);
+    padding: 60px 20px 100px 20px; /* Padding haut pour laisser de la place au bouton */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 30px; /* Espace entre les photos */
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 100%;
+    /* Pour un effet de survol (hover) */
+    overflow: hidden; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Assure que l'image remplit son cadre */
+}
+
+/* --- FOOTER (Contacts) --- */
+.contact-footer {
+    background-color: var(--footer-dark);
+    color: var(--white);
+    padding: 30px 20px;
+    font-size: 1rem;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Gère les petits écrans */
+    gap: 15px;
+}
+
+.main-contacts {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-item {
+    font-weight: 300;
+}
+
+.website {
+    text-decoration: underline;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.website:hover {
+    color: var(--gold-main);
+}

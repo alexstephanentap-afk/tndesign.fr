@@ -1,0 +1,152 @@
+/* Variables de couleurs */
+:root {
+    --deep-blue: #1b2650;
+    --gold-gradient: linear-gradient(to bottom, #c5a04d, #9e7d35);
+    --white: #ffffff;
+    --footer-bg: #162874;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+}
+
+/* HEADER & OVERLAY */
+.hero-header {
+    background: var(--deep-blue) url('background 2.jpg') center/cover;
+    background-blend-mode: multiply; /* Crée l'effet de teinte bleue sur l'image */
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px; /* Espace pour la barre dorée */
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: var(--white);
+}
+
+/* LOGO */
+/* Logo & Titre */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img { width: 250px; }
+
+
+.brand-text h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.gold-subtitle {
+    color: #c5a04d;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+
+/* LA BARRE DORÉE (Navigation) */
+.nav-banner {
+    position: absolute;
+    bottom: -35px; /* Chevauchement */
+    width: 75%;
+    background: var(--gold-gradient);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* GRILLE 2x2 */
+.gallery-container {
+    padding: 40px 10%;
+    background-color: var(--white);
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px;
+}
+
+.photo-card {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-top, .footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+
+.site-link {
+    text-decoration: underline;
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 768px) {
+    .grid-2x2 {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .nav-banner {
+        width: 90%;
+        padding: 15px 20px;
+    }
+    .nav-title {
+        font-size: 1.2rem;
+    }
+}

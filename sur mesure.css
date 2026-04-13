@@ -1,0 +1,144 @@
+:root {
+    --gold: #c5a04d;
+    --dark-blue: #1a224e;
+    --black-footer: #0c122b;
+    --white: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--white);
+    background-color: var(--black-footer);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* SECTION HAUTE */
+.top-section {
+    position: relative;
+    background: url('background 2.jpg') center/cover no-repeat;
+    height: 60vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(26, 34, 78, 0.7); /* Teinte bleue sur l'image */
+    z-index: 1;
+}
+
+.header-content, .cta-button {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* LOGO */
+/* Logo & Titre */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img { width: 250px; }
+
+.brand-name h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+.brand-name .subtitle {
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+/* LISTE SERVICES */
+.hero-text {
+    margin-top: 30px;
+}
+
+.tagline {
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+.tagline span {
+    color: var(--white);
+}
+
+.services-list {
+    list-style: square;
+    color: var(--white);
+    line-height: 1.8;
+}
+
+/* BOUTON CENTRAL */
+.cta-button {
+    background: linear-gradient(to bottom, #d4b062, #9e7d35);
+    padding: 15px 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    top: 40px; /* Pour chevaucher les deux sections */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* SECTION BASSE */
+.bottom-section {
+    background-color: var(--gold);
+    padding: 80px 40px 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+.categories-list li::before {
+    content: "❑ ";
+    margin-right: 10px;
+}
+
+/* FOOTER */
+.contact-footer {
+    background-color: var(--black-footer);
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.web-link {
+    text-decoration: underline;
+}

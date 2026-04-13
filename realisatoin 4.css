@@ -1,0 +1,162 @@
+:root {
+    --gold: #c5a04d;
+    --navy-blue: #1b2650;
+    --footer-bg: #0c122b;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--white);
+    color: #333;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background: linear-gradient(rgba(27, 38, 80, 0.75), rgba(27, 38, 80, 0.75)), 
+                url('background 2.jpg') center/cover;
+    height: 42vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 250px; /* Ajustez selon votre logo */
+}
+
+.title-area h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+.gold-subtitle {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+
+/* --- BARRE DE NAVIGATION DORÉE --- */
+.gold-nav-bar {
+    position: absolute;
+    bottom: -35px;
+    width: 80%;
+    max-width: 950px;
+    background: linear-gradient(to bottom, #d4b062, #9e7d35);
+    display: flex;
+    align-items: center;
+    padding: 18px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.nav-left, .nav-right {
+    flex: 1; /* Permet de diviser la barre en 3 zones égales */
+}
+
+.nav-center {
+    flex: 2;
+    text-align: center;
+}
+
+.btn-back {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 2px;
+    font-size: 1.1rem;
+}
+
+.page-title {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- GALERIE PHOTOS --- */
+.gallery {
+    padding: 100px 5% 50px 5%; /* Padding haut important pour la barre dorée */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.img-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.img-container img {
+    width: 100%;
+    height: 550px; /* Hauteur fixe pour garantir l'uniformité */
+    object-fit: cover;
+    display: block;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 30px 20px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.links {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+.footer-row a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .title-area h1 {
+        font-size: 2.2rem;
+    }
+    .gold-nav-bar {
+        width: 90%;
+        padding: 15px;
+    }
+    .page-title {
+        font-size: 1.3rem;
+    }
+}
